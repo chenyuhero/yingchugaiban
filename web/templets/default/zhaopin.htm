@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{dede:field.typename/} - {dede:global.cfg_webname/}</title>
+    {dede:include filename='meta.htm'/}
+    <style>
+        header .menublock .menulink .typeid4 a {
+            border-bottom-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    {dede:include filename="head.htm"/}
+
+    <!-- 中间区域 开始 -->
+    <section class="container">
+        <div class="common-banner">
+            <img src="{dede:field.arcpic/}" alt="{dede:field.typename/}">
+        </div>
+        <div class="zhaopin-box">
+
+            <!-- 开始 -->
+            <div class="w1212">
+                <div class="left">
+                    <div class="pic">
+                        <img src="/images/zhaopin_01.jpg" alt="">
+                    </div>
+                    <ul class="left-menu">
+                        {dede:channel type='self' currentstyle="<li class='hover'><a href='~typelink~'>~typename~</a></li>"}
+                        <li><a href='[field:typeurl/]' [field:rel/]>[field:typename/]</a></li>
+                        {/dede:channel}
+                    </ul>
+                </div>
+                <ul class="zhaopin-list">
+                    <!-- for begin -->
+                    {dede:list orderby='hot' pagesize='10000' addfields='body' channelid='1'}
+                    <li>
+                        <div class="title"><b>[field:fulltitle/]</b><br>[field:description/]</div><br><br>
+                        <div class="des">
+                            [field:body/]
+                        </div>
+                    </li>
+                    {/dede:list}
+                    <!-- for end -->
+                    <!-- for begin -->
+                    <li>
+                        <div class="title"><b>简历投递方式</b> <br>E-mail：<a href="mailto:hr@zd-asset.com" style="color: #221815">hr@zd-asset.com</a> (可将简历以“应聘岗位+姓名”为题目发送)</div><br><br>
+                    </li>
+                    <!-- for end -->
+                </ul>
+            </div>
+            <!-- 结束 -->
+
+
+        </div>
+
+    </section>
+    <!-- 中间区域 结束 -->
+    
+    
+    {dede:include filename="footer.htm"/}
+    <script>
+        $(function() {
+            // 
+        });
+    </script>
+</body>
+
+</html>

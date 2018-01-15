@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <?php echo $cfg_webname; ?>- 会员登录</title>
+    <link rel="stylesheet" href="templets/style/login.css">
+    <script src="templets/js/j.js"></script>
+    </script>
+    <script type="text/javascript">
+    function changeAuthCode() {
+        var num = new Date().getTime();
+        var rand = Math.round(Math.random() * 10000);
+        num = num + rand;
+        $('#ver_code').css('visibility', 'visible');
+        if ($("#vdimgck")[0]) {
+            $("#vdimgck")[0].src = "../include/vdimgck.php?tag=" + num;
+        }
+        return false;
+    }
+    $(function(){
+        //设置登录注册框居中显示
+        $(".loginbox").css("padding-top",($(window).height()-$(".loginbox").height())/2);
+    })
+    </script>
+</head>
+
+<body>
+    <div class="loginbox">
+        <a href="/"><img src="/images/logo.png" alt="logo" class="loginlogo"></a>
+        <div class="login clearfix">
+            <div class="loginleft">
+                <h2><span class="active">账号登录</span><span><a href="index_do.php?fmdo=user&dopost=regnew">账号注册</a></span></h2>
+                <form id="loginform" name='form1' method='POST' action='index_do.php'>
+                    <input type="hidden" name="fmdo" value="login">
+                    <input type="hidden" name="dopost" value="login">
+                    <input type="hidden" name="gourl" value="<?php if(!empty($gourl)) echo $gourl;?>">
+                    <dl>
+                        <dd>
+                            <input type="text" name="userid" placeholder="用户名" id="txtUsername">
+                        </dd>
+                        <dd>
+                            <input type="password" name="pwd" placeholder="请输入密码" id="txtPassword">
+                        </dd>
+                        <dd class="checkcode clearfix">
+                            <input type="text" placeholder="验证码" id="vdcode" name="vdcode">
+                            <a href="#" onclick="changeAuthCode();"><img id="vdimgck" align="absmiddle" onclick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="../include/vdimgck.php" /></a>
+                        </dd>
+                        <dd class="keeptime">有效期：
+                            <input type="radio" value="2592000" name="keeptime" id="ra1" />
+                            <label for="ra1">一个月</label>
+                            <input type="radio" checked="checked" value="604800" name="keeptime" id="ra2" />
+                            <label for="ra2">一周</label>
+                            <input type="radio" value="86400" name="keeptime" id="ra3" />
+                            <label for="ra3">一天</label>
+                            <input type="radio" value="0" name="keeptime" id="ra4" />
+                            <label for="ra4">即时</label>
+                        </dd>
+                        <dd><button type="submit" id="btnSignCheck">提　交</button></dd>
+                    </dl>
+                    <p class="forget"><a href="resetpassword.php" title="找回密码">忘记密码？</a></p>
+                </form>
+
+            </div>
+            <!--div class="loginright">
+                注册提示
+            </div-->
+        </div>
+    </div>
+</body>
+
+</html>

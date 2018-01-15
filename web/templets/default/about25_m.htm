@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{dede:field.typename/} - {dede:global.cfg_webname/}</title>
+    {dede:include filename='meta_m.htm'/}
+    <style>
+        header .menublock .menulink .typeid1 a {
+            border-bottom-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    {dede:include filename="head_m.htm"/}
+    
+    <!-- 中间区域 开始 -->
+
+<div class="pagebanner"><img src="/yczcimg/Banner/About.jpg"></div>
+<div class="subnva subnva_4">
+    <div class="wp clearfix">
+    <ul class="clearfix ul3">
+     <li class="" id="classnav1"><a href="/m/list.php?tid=1">公司简介</a><span>/</span></li>
+     <li class="" id="classnav2"><a href="/m/list.php?tid=23">总裁致辞</a><span>/</span></li>
+     <li class="" id="classnav3"><a href="/m/list.php?tid=24">投资策略</a><span>/</span></li>
+     <li class="curr" id="classnav4"><a href="/m/list.php?tid=25">组织架构</a><span>/</span></li>
+    </ul>
+    </div>
+</div>
+			      <div class="mainblank20"></div>
+
+    <section class="container" style="background-color: #fff;">
+        <div class="about-box">
+            {dede:field.content/}
+        </div>
+
+
+    </section>
+    <!-- 中间区域 结束 -->
+    
+			      <div class="mainblank40"></div>
+    {dede:include filename="footer_m.htm"/}
+
+    <script>
+        $(function() {
+            // 
+        });
+    </script>
+</body>
+
+</html>

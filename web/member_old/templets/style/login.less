@@ -1,0 +1,193 @@
+@charset "utf-8";
+@import url(./public.css); //通用样式
+
+/*******根据客户网站风格，在此更改less预定义常量即可********/
+
+
+/**色系**/
+
+@color :#606a69; //通用文字颜色
+@link :#2bcc1a; //链接颜色
+@bcolor :#ccc; //边框颜色
+
+/**字体大小**/
+
+@fz :12px; //一般文字大小
+@fz2 :14px; //中号文字大小
+@fz3 :16px; //大号文字大小
+
+/**css3 属性**/
+
+.radius(@size) {
+    -webkit-border-radius: @size;
+    -moz-border-radius: @size;
+    border-radius: @size;
+}
+
+.box-shadow (@x, @y, @blur, @ext, @color) {
+    box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    -webkit-box-shadow: @arguments;
+}
+
+h2 {
+    font-size: @fz3;
+}
+
+.active {
+    color: @link;
+    border-bottom: solid 2px @link;
+}
+
+body {
+    font-size: @fz2;
+    color: @color;
+    line-height: 24px;
+    background: url(../images/loginbg.jpg);
+}
+
+.loginbox {
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 40px;
+    text-align: center;
+    img.loginlogo {
+        margin: 0 auto;
+        margin-bottom: 20px;
+        max-height: 52px;
+    }
+    .login {
+        border: solid 1px @bcolor;
+        width: 100%;
+        .radius(5px);
+        background: rgba(255, 255, 255, 0.4);
+        .loginleft {
+            width: 100%;
+            float: left;
+            h2 {
+                .box-shadow(0, 4px, 2px, -2px, @bcolor);
+                line-height: 30px;
+                margin: 10px;
+                span {
+                    display: inline-block;
+                    width: 50%;
+                    a {
+                        color: @color;
+                        text-decoration: none;
+                    }
+                }
+            }
+            #loginform {
+                margin: 20px 0 10px 0;
+                padding: 20px 0;
+                dl {
+                    dd {
+                        display: block;
+                        margin-bottom: 36px;
+                        padding: 0 50px;
+                    }
+                    dd:last-child {
+                        margin-bottom: 0;
+                    }
+                    dd.keeptime,dd.resettype {
+                        text-align: left;
+                        font-size: 12px;
+                        input {
+                            display: inline;
+                            width: 12px;
+                            height: 12px;
+                            vertical-align: middle;
+                        }
+                        label {
+                            display: inline;
+                        }
+                    }
+                    dd.checkcode {
+                        input {
+                            width: 100px;
+                            display: block;
+                            float: left;
+                            text-transform: uppercase;
+                        }
+                        img {
+                            float: right;
+                            height: 30px;
+                        }
+                    }
+                    dd button {
+                        border: solid 1px #ccc;
+                        height: 36px;
+                        width: 100%;
+                        color: #f8f8f8;
+                        display: block;
+                        .radius(5px);
+                        font-weight: bold;
+                        font-size: @fz2;
+                        background: -webkit-linear-gradient(top, #65ba3b, #348121);
+                        background: -moz-linear-gradient(top, #65ba3b, #348121);
+                        background: -ms-linear-gradient(top, #65ba3b, #348121);
+                        background: -o-linear-gradient(top, #65ba3b, #348121);
+                        background: linear-gradient(top, #65ba3b, #348121);
+                    }
+                }
+                input {
+                    width: 90%;
+                    height: 30px;
+                    border: solid 1px @bcolor;
+                    background: rgba(119, 119, 119, 0.1);
+                    .radius(5px);
+                    padding: 0 8px;
+                    color: #666;
+                }
+                .forget {
+                    text-align: right;padding-right: 50px;
+                    a {
+                        text-decoration: none;color:@color;
+                    }
+                    a:hover{text-decoration: underline;}
+                }
+            }
+        }
+        .loginright {
+            width: 50%;
+            float: right;
+            height: 350px;
+            margin-top: 60px;
+            margin-bottom: 20px;
+            .box-shadow(-4px, 0, 4px, -4px, @bcolor);
+        }
+    }
+}
+
+/**用户注册**/
+#reg{
+    max-width: 600px;
+    .login{
+        .loginleft{
+            #loginform{
+                .regdl{
+                    dd{
+                        text-align: left;margin-bottom: 10px;
+                        label{
+                            display: inline-block;min-width: 80px;text-align: right;
+                            i{color:red;padding-right: 5px;}
+                        }
+                        input.txt{width: 200px;}
+                    }
+                    dd.checkcode{
+                        input{float: none;display: inline-block;}
+                        img{float: none;margin-left: 10px;.radius(5px)}
+                    }
+                    dd.agree{
+                        input{width: 14px;height: 14px;vertical-align: middle;margin-left: 84px;margin-right: 10px;}
+                    }
+                    dd.regok{
+                        button{width: 220px;margin-left: 80px;}
+                    }
+                    dd .agreement{border:solid 1px #ccc;padding:5px;background:#f8f8f8;margin-left: 80px;height: 50px;overflow-y:scroll;}
+                }
+            }
+        }
+    }
+}

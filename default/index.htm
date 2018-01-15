@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:global.keywords/}" />
+    <meta name="description" content="{dede:global.description/}" />
+    {dede:include filename='meta.htm'/}
+    <style>
+        header .menublock .menulink .homeactive a {
+            border-bottom-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    {dede:include filename="head.htm"/}
+    
+    <!-- 中间区域 开始 -->
+<div class="ibanner">
+	<div class="single-item">
+    <div class="slick-slide"><a><img src="/yczcimg/banner/b1.jpg" alt="盈楚资产"></a></div>
+    <div class="slick-slide"><a><img src="/yczcimg/banner/b2.jpg" alt="盈楚资产"></a></div>
+    <div class="slick-slide"><a><img src="/yczcimg/banner/b3.jpg" alt="盈楚资产"></a></div>
+	</div>
+</div>
+<div id="fullbg"></div>
+<script src="/images/jquery-1.8.3.min.js" ></script>
+<script src="/images/slick.js"></script>
+<script src="/images/js.js"></script>
+<div class="explain_bg" onClick="explain_hide()"></div>
+    <section class="container">
+
+        <div class="home-portfolio">
+            <div class="w1212">
+                <div class="big-title">
+			    <div class="content-center">
+				    <div class="containerT">
+				      <h2><strong>投资业务</strong></h2>
+				      <h4><strong><B>INVESTMENT PORTFOLIO</B></strong></h4>
+				    </div>
+			    </div>
+                </div>
+		    <div class="indexYun">
+		        <div class="mainbox">
+		            <div class="inner" id="inner">
+		                	<script>
+		                    $(function(){
+								$("#inner li").hover(function(){
+									$(this).find(".on_show").stop(true,true).animate({right:"0"},500);
+								},function(){
+									$(this).find(".on_show").stop(true,true).animate({right:"-295px"},500);
+								})
+							})
+		                    </script>
+		                <ul>
+		                    <li class="on bg1">
+		                    	<div class="on_txt">
+		                            <div class="icon"><img src="/yczcimg/Index/IT1.png"></div>
+		                            <div class="name">私募股权投资</div>
+		                            <div class="intro">盈楚资产致力于私募股权投资，结合自身团队优势，并与主流券商投行部和著名私募机构紧密合作，通过多元化与多级化投资策略，为投资者创造高额回报。</div>
+		                        </div>
+		                        <div class="on_show" onclick="window.open('/plus/list.php?tid=6')" style="right: -345px;">
+		                        	<div class="item">
+		                            	<span><img src="/yczcimg/Index/t001.png"></span>
+		                            </div>
+		                        	<div class="info">私募股权投资<br><font>盈楚资产致力于私募股权投资，结合自身团队优势，并与主流券商投行部和著名私募机构紧密合作，通过多元化与多级化投资策略，为投资者创造高额回报。</font></div>
+		                        </div>
+		                    </li>
+		                    <li class="bg2">
+		                    	<div class="on_txt">
+		                            <div class="icon"><img src="/yczcimg/Index/IT2.png"></div>
+		                            <div class="name">产业投资</div>
+		                            <div class="intro">产业投资基金指向具有高增长潜力的未上市企业进行股权或准股权进行投资，并参与企业的经营管理，以期所投企业发育成熟后通过股权转让实现资本增值。</div>
+		                        </div>
+		                        
+		                        <div class="on_show" onclick="window.open('/plus/list.php?tid=8')" style="right: -345px;">
+		                        	<div class="item">
+		                            	<span><img src="/yczcimg/Index/t002.png"></span>
+		                            </div>
+		                        	<div class="info">产业投资<br><font>产业投资基金指向具有高增长潜力的未上市企业进行股权或准股权进行投资，并参与企业的经营管理，以期所投企业发育成熟后通过股权转让实现资本增值。</font></div>
+		                    </li>   
+		                     <li class="bg3">
+		                    	<div class="on_txt">
+		                            <div class="icon"><img src="/yczcimg/Index/IT3.png"></div>
+		                            <div class="name">不动产投资</div>
+		                            <div class="intro">专注于不动产领域，覆盖住宅、写字楼、零售商业、物流等各业态，并选择合适时机和项目投资；通过灵活创新的金融交易结构设计能力，强大的资源整合能力，构建跨周期、多区域、多业态、多策略的组合投资，致力于获取长期增值收益。</div>
+		                        </div>
+		                        
+		                        <div class="on_show" onclick="window.open('/plus/list.php?tid=7')" style="right: -345px;">
+		                        	<div class="item">
+		                            	<span><img src="/yczcimg/Index/t003.png"></span>
+		                            </div>
+		                        	<div class="info">不动产投资<br><font>专注于不动产领域，覆盖住宅、写字楼、零售商业、物流等各业态，并选择合适时机和项目投资；通过灵活创新的金融交易结构设计能力，强大的资源整合能力，构建跨周期、多区域、多业态、多策略的组合投资，致力于获取长期增值收益。</font></div>
+		                    </li>  
+		                     <li class="bg4">
+		                    	<div class="on_txt">
+		                            <div class="icon"><img src="/yczcimg/Index/IT4.png"></div>
+		                            <div class="name">海外投资</div>
+		                            <div class="intro">随着“一带一路”和《中国制造2025》的政策推出，中国资本走出去已成大势所趋,在这样的形势下盈楚资产紧跟国家政策致力于收购海外优质矿产资源、商业不动产、高端制造业等优质资产。</div>
+		                        </div>
+		                        
+		                        <div class="on_show" onclick="window.open('/plus/list.php?tid=10')" style="right: -345px;">
+		                        	<div class="item">
+		                            	<span><img src="/yczcimg/Index/t004.png"></span>
+		                            </div>
+		                        	<div class="info">海外投资<br><font>随着“一带一路”和《中国制造2025》的政策推出，中国资本走出去已成大势所趋,在这样的形势下盈楚资产紧跟国家政策致力于收购海外优质矿产资源、商业不动产、高端制造业等优质资产。</font></div>
+		                    </li>  
+		                </ul>
+		            </div>
+		        </div>
+		    </div>  
+            </div>
+        </div>
+        <div class="mainIt">
+	      <div class="container">
+		    <div class="content-centerTJ">
+			    <div class="containerTJ">
+			      <div class="mainblank40"></div>
+			      <h2><strong>专题研究</strong></h2>
+			      <h4><strong><B>RESEARCHES</B></strong></h4>
+			      <div class="mainblank30"></div>
+			    </div>
+		    </div>
+		    <div class="row JT-box margin-bottom-0">
+		          <div class="col-md-12 col-sm-4">
+		            <div class="JT-box-heading">
+		              	<ul>
+		            		<li><a href="/plus/view.php?aid=31" target="_blank" ><img src="/yczcimg/Index/jt1.jpg" width="217" height="260"/></a></li>
+		            		<li><a href="/plus/view.php?aid=30" target="_blank" ><img src="/yczcimg/Index/jt2.jpg" width="217" height="260"/></a></li>
+		            		<li><a href="/plus/view.php?aid=29" target="_blank" ><img src="/yczcimg/Index/jt3.jpg" width="217" height="260"/></a></li>
+		            		<li><a href="/plus/view.php?aid=28" target="_blank" ><img src="/yczcimg/Index/jt4.jpg" width="217" height="260"/></a></li>
+		              	</ul>
+
+		            </div>
+		          </div>
+		    </div>
+		    
+		    
+		    
+	      </div>
+        </div>
+
+
+
+        <div class="home-portfolio">
+            <div class="w1212">
+                <div class="big-title">
+			    <div class="content-center">
+				    <div class="containerT">
+				      <h2><strong>新闻资讯</strong></h2>
+				      <h4><strong><B>NEWS    EXPRESS</B></strong></h4>
+				    </div>
+			    </div>
+                </div>
+		        <div class="row service-box margin-bottom-40">
+		          <div class="col-md-12 col-sm-4">
+		            <div class="homenew">
+		                <ul>
+          {dede:arclist addfields='small' channelid='1' typeid='26' row=3 titlelen=32 noflag='h'}
+		                            <li>
+		                                <div class="imag2"><a href="[field:arcurl/]" title="[field:title/]" target= _blank>
+		                                    <div class="imag2a">
+		                                        <img src="[field:small/]"></div></a></div>
+		                                <div class="textc2">
+		                                    <h1><a href="[field:arcurl/]" title="[field:title/]" target= _blank>[field:fulltitle/]</a></h1>
+		                                    <a href="[field:arcurl/]" title="[field:title/]" target= _blank><span class="texccc">
+		                                          [field:description/]</span>
+		                                    <span class="paaf">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></a>
+		                                </div>
+		                            </li>
+          {/dede:arclist}
+		                   
+		                </ul>
+		            </div>
+		          </div>
+		        </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="home-link">
+            <div class="w1212">
+                <div class="big-title">
+			    <div class="content-center">
+				    <div class="containerT">
+				      <h2><strong>友情链接</strong></h2>
+				      <h4><strong><B>FRIENDSHIP LINK</B></strong></h4>
+				    </div>
+			    </div>
+                </div>
+                <ul class="home-link-list">
+                    {dede:arclist typeid='16' row='5000' orderby='hot' addfields='body' channelid='1'}
+                    <li>
+                        <a href="[field:body/]" target="_blank">
+                            <img src="[field:litpic/]" alt="[field:fulltitle/]">
+                        </a>
+                    </li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+        </div>
+
+
+    </section>
+    <!-- 中间区域 结束 -->
+
+    {dede:include filename="footer.htm"/}
+
+    <script src="/style/libs/jquery.SuperSlide.2.1.1.js"></script>
+
+    <script type="text/javascript">
+        jQuery(".slider").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",pnLoop:true,mouseOverStop:false,delayTime:500,interTime:3000});
+    </script>
+
+    <script>
+        $(window).load(function(){
+            var winH2 = $(window).width();
+            if(winH2>480) {
+                var max_height=0;
+                $('.home-portfolio .home-portfolio-list li .des').each(function(){
+                    if( $(this).height() > max_height ){
+                        max_height= $(this).height();
+                        console.log(max_height);
+                    };
+                })
+                $('.home-portfolio .home-portfolio-list li .des').css("height",max_height);
+            }
+
+        });
+        $(function() {
+
+            var swiper1 = new Swiper('.home-banner .swiper-container', {
+                pagination: '.home-banner .swiper-pagination',
+                paginationClickable: true,
+                spaceBetween: 0,
+                loop: true,
+                autoplay: 2000,
+                speed: 800,
+                effect : 'fade'
+            });
+        });
+    </script>
+	<script>
+    $(function(){
+		var length = $("#inner li").length; //alert(length)
+		var wid = $("#inner li").width()+61; //alert(wid)
+		var left = $("#inner ul").position().left; //alert(left)
+		var number = $("#number").val(); //alert(number)
+		
+        $(".prev").click(function(){
+            if(number+4<length){
+                number =Number(number)+1;
+                //console.log(num)
+                $("#number").val(number);
+            }
+            else{
+                number=0;	
+                $("#number").val(number);
+            }
+            left = "-"+number*wid+"px"; 
+            $("#inner ul").stop(true,true).animate({left:left});
+        });
+        
+        $(".next").click(function(){
+            if(number<=0){
+                number = length-4;
+            }
+            else{
+                number =Number(number)-1;
+                //console.log(num)
+                $("#number").val(number);
+            }
+            left = "-"+number*wid+"px"; 
+             $("#inner ul").stop(true,true).animate({left:left});
+        });
+        
+	})
+    </script>
+    
+</body>
+
+</html>

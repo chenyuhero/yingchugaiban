@@ -1,0 +1,41 @@
+<?php
+$z[0]=Array("global","",88,114);
+$z[0][4]['name']="cfg_webname";
+$z[1]=Array("global","",156,182);
+$z[1][4]['name']="cfg_webname";
+$z[2]=Array("global","",223,253);
+$z[2][4]['name']="cfg_description";
+$z[3]=Array("include","",260,295);
+$z[3][4]['filename']="meta.htm";
+$z[4]=Array("include","",493,528);
+$z[4][4]['filename']="head.htm";
+$z[5]=Array("arclist","\r\n					<li><a href=\"[field:arcurl/]\"><img src=\"[field:litpic/]\" alt=\"\"></a></li>\r\n					",1106,1250);
+$z[5][4]['row']="1";
+$z[5][4]['flag']="h";
+$z[5][4]['typeid']="7";
+$z[6]=Array("arclist","\r\n					<li><a href=\"[field:arcurl/]\">[field:title/]</a></li>\r\n					",1257,1397);
+$z[6][4]['row']="2";
+$z[6][4]['noflag']="h";
+$z[6][4]['typeid']="7";
+$z[6][4]['titlelen']="80";
+$z[7]=Array("arclist","\r\n					<li>\r\n						<a href=\"[field:arcurl/]\">[field:title/]</a>\r\n						<p>[field:description/]... <a href=\"[field:arcurl/]\">>>详情</a></p>\r\n					</li>\r\n					",1518,1749);
+$z[7][4]['row']="1";
+$z[7][4]['flag']="c";
+$z[7][4]['typeid']="8";
+$z[7][4]['titlelen']="120";
+$z[8]=Array("arclist","\r\n					<li>\r\n						<a href=\"[field:arcurl/]\">[field:title/]</a><span>[field:pubdate function='strftime(\"%y-%m-%d\",@me)'/]</span>\r\n					</li>\r\n					",1756,1976);
+$z[8][4]['row']="3";
+$z[8][4]['noflag']="c";
+$z[8][4]['typeid']="8";
+$z[8][4]['titlelen']="80";
+$z[9]=Array("arclist","\r\n					<li>\r\n						<a href=\"[field:arcurl/]\">[field:title/]</a>\r\n						<p>[field:description/]... <a href=\"[field:arcurl/]\">查看详情>></a></p>\r\n					</li>\r\n					",2097,2344);
+$z[9][4]['row']="1";
+$z[9][4]['typeid']="9";
+$z[9][4]['orderby']="senddate";
+$z[9][4]['titlelen']="120";
+$z[10]=Array("channelartlist","\r\n				{dede:channel type='son' noself='yes'}\r\n				<li>\r\n					<div class=\"picbox\">\r\n					<a href=\"[field:typelink/]\"><img src=\"[field:arcpic/]\" alt=\"\"></a>\r\n					<span><a href=\"[field:typelink/]\">[field:typename/]</a></span>\r\n					</div>\r\n					<div class=\"miaoshu\"><a href=\"[field:typelink/]\">[field:description/]</a></div>\r\n				</li>\r\n				{/dede:channel}\r\n				",2436,2852);
+$z[10][4]['typeid']="2,2";
+$z[11]=Array("include","",2888,2925);
+$z[11][4]['filename']="footer.htm";
+
+?>

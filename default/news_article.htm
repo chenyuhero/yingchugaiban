@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
+    {dede:include filename='meta.htm'/}
+    <style>
+        header .menublock .menulink .typeid3 a {
+            border-bottom-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    {dede:include filename="head.htm"/}
+    
+    <!-- 中间区域 开始 -->
+<div class="pagebanner"><img src="/yczcimg/Banner/News.jpg"></div>
+    <section class="container">
+        <div class="news-box">
+
+            <!-- 开始 -->
+            <div class="w1212">
+
+                <span class="point">·</span>{dede:field.position/}
+
+                <div class="box-des">
+                    <div class="art-title">{dede:field.title/}</div>
+                    <div class="art-pubdate">{dede:field.pubdate function='strftime("%Y-%m-%d",@me)'/}</div>
+                    <div class="art-body">
+                        {dede:field.body/}
+                    </div>
+                </div>
+            </div>
+            <!-- 结束 -->
+
+
+        </div>
+
+    </section>
+    <!-- 中间区域 结束 -->
+
+
+    {dede:include filename="footer.htm"/}
+    <script>
+        $(function() {
+            // 
+        });
+    </script>
+</body>
+
+</html>

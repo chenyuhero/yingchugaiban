@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{dede:field.typename/} - {dede:global.cfg_webname/}</title>
+    {dede:include filename='meta_m.htm'/}
+    <style>
+        header .menublock .menulink .typeid3 a {
+            border-bottom-color: #fff;
+        }
+.theme-popover {
+	z-index:9999;
+	position:fixed;
+	top:50%;
+	left:50%;
+	width:614px;
+	height:368px;
+	margin:-180px 0 0 -330px;
+	border-radius:5px;
+	border:solid 2px #ccc;
+	background-color:#fff;
+	display:none;
+	box-shadow: 0 0 0px #666;
+	background:url(../images/project.jpg) no-repeat 0px 0px
+}
+.theme-poptit {
+	padding:186px 160px;
+	width:296px;
+	height:38px;
+}
+.ipt {
+	box-shadow: inset 0 1px 0 #f8f8f8;
+	background-color: #fff;
+	padding: 4px 6px;
+	height: 21px;
+	line-height: 21px;
+	color: #555;
+	width: 230px;
+	vertical-align: baseline;
+	background:#ffffff;
+}
+    </style>
+<script src="../images/jquery.min.js"></script>
+<script>
+jQuery(document).ready(function($) {
+	$('.theme-login').click(function(){
+		$('.theme-popover-mask').fadeIn(100);
+		$('.theme-popover').slideDown(200);
+	})
+	$('.theme-poptit .close').click(function(){
+		$('.theme-popover-mask').fadeOut(100);
+		$('.theme-popover').slideUp(200);
+	})
+
+})
+</script>
+</head>
+
+<body>
+    {dede:include filename="head_m.htm"/}
+
+    <!-- 中间区域 开始 -->
+<div class="pagebanner"><img src="/yczcimg/Banner/News.jpg"></div>
+<div class="subnva subnva_3">
+    <div class="wp clearfix">
+    <ul class="clearfix ul3">
+     <li class="" id="classnav1"><a href="/m/list.php?tid=26">新闻资讯</a><span>/</span></li>
+     <li class="curr" id="classnav3"><a href="/m/list.php?tid=28">品牌活动</a><span>/</span></li>
+     <li class="" id="classnav4"><a href="/m/list.php?tid=29">视频中心</a><span>/</span></li>
+    </ul>
+    </div>
+</div>
+    <section class="container" style="background-color: #fff;">
+			      <div class="mainblank20"></div>
+        <div class="common-position">
+            <div class="w1212">
+                <span class="point">·</span>{dede:field.position/}
+            </div>
+        </div>
+        <div class="news-box">
+
+            <!-- 开始 -->
+            <div class="w1212">
+
+		<div class="Ny-title">
+			<div class="cn">
+				品牌活动<span>BRAND ACTIVITY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+		</div>
+			      <div class="box-des2">
+                            {dede:list orderby='sortrank' flag='c,p' pagesize='6'}
+                             <a href="view.php?aid=[field:id/]" >
+                <div class="des">
+                    <div class="left"><img src="[field:small/]" alt="[field:fulltitle/]" border="0" align="middle" alt="[field:title/]" width="300" height="168">
+                    </div>
+                    <div class="right">
+                    	<div class="title">
+				[field:fulltitle/]
+                    	</div>
+				[field:description/]
+                    	<div class="sqqaq">[field:pubdate function="MyDate('Y-m-d',@me)"/]<span>查看详情>></span></div>
+                    </div>
+		</div>
+			      <div class="mainblank20">&nbsp;</div>
+
+
+                             </a>  
+
+
+
+
+                            {/dede:list}
+
+
+            	</div>
+            </div>
+		<div  align="center" class="fenye" id="fenye">
+		  <table border="0"><tr><td id="pagelist">
+			 {dede:pagelist listitem="index,end,pre,next,pageno" listsize="5"/}</td></tr></table>
+		</div>
+            <!-- 结束 -->
+
+
+        </div>
+
+    </section>
+    <!-- 中间区域 结束 -->
+
+<div class="theme-popover">
+     
+     <div class="theme-popbod dform">
+           <form class="theme-signin" name="loginform" action="ggl.php" method="post">
+		<div class="theme-poptit">
+			<table cellSpacing="0" cellPadding="0" width="294" border="0">
+				<tr>
+					<td width="294" colspan="2">&nbsp;&nbsp;&nbsp;<input class="ipt" type="password" name="pwd" value="" size="20" /></td>
+				</tr>
+				<tr>
+					<td width="294" colspan="2">&nbsp;<br /><br /><br /></td>
+				</tr>
+				<tr>
+					<td width="144"><input name="imgbtn" type="image" src="../images/form.jpg" width="144" height="38" border="0"></td>
+					<td width="150" align="right"><a href="javascript:;" title="取消" class="close"><img src="../images/cancel.jpg" width="144" height="38"></a></td>
+				</tr>
+			</table>
+
+                     
+		</div>
+           </form>
+     </div>
+</div>
+<div class="theme-popover-mask"></div>
+
+    {dede:include filename="footer_m.htm"/}
+</body>
+
+</html>

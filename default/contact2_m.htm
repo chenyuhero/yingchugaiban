@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{dede:field.typename/} - {dede:global.cfg_webname/}</title>
+    {dede:include filename='meta_m.htm'/}
+    <style>
+        header .menublock .menulink .typeid1 a {
+            border-bottom-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    {dede:include filename="head_m.htm"/}
+    
+    <!-- 中间区域 开始 -->
+
+<div class="pagebanner"><img src="/yczcimg/Banner/contact1.jpg"></div>
+<div class="subnva subnva_3">
+    <div class="wp clearfix">
+    <ul class="clearfix ul3">
+     <li class="" id="classnav1"><a href="/m/list.php?tid=5">联系方式</a><span>/</span></li>
+     <li class="" id="classnav3"><a href="/m/list.php?tid=34">人才战略</a><span>/</span></li>
+     <li class="curr" id="classnav4"><a href="/m/list.php?tid=35">招贤纳士</a><span>/</span></li>
+    </ul>
+    </div>
+</div>
+
+    <section class="container" style="background-color: #fff;">
+        <div class="common-position">
+            <div class="w1212">
+                <span class="point">·</span>{dede:field.position/}
+            </div>
+        </div>
+        <div class="mainblank20"></div>
+        <!-- 招聘列表标题与内容循环开始-->
+        {dede:list orderby='sortrank' flag='c,p' pagesize='6'}
+        <div class="des" style="text-align: left;border: 1px solid #6D3D1F;
+                width: 938px;height:auto;
+                line-height: 30px;
+                overflow: hidden;
+                margin:0 auto ">
+            <div class="right" id="div_all[field:id/]">
+                <div class="title" style="font-size: 2.5em;
+            margin: 25px 35px;color:#C49715">
+                    [field:fulltitle/]<!-- 招聘标题-->
+                </div>
+                <div style="margin-left: 45px">
+                    [field:shorttitle/]
+                </div>
+                <div id="[field:id/]" style="display: none">
+                    [field:body/]
+                </div>
+                <span id="span_[field:id/]" style="margin-left: 95%;">>></span>
+            </div>
+        </div>
+        <div class="mainblank20"></div>
+
+        {/dede:list}
+        <!-- 招聘列表标题与内容循环结束-->
+
+    </section>
+    <!-- 中间区域 结束 -->
+    
+    {dede:include filename="footer_m.htm"/}
+
+    <script>
+        document.getElementById('div_all13').onclick = function(){
+            if(document.getElementById('13').style.display == 'none'){
+                document.getElementById('13').style.display = 'block';
+                document.getElementById('12').style.display = 'none';
+                document.getElementById('11').style.display = 'none';
+                document.getElementById('span_13').innerText = '<<';
+                document.getElementById('span_12').innerText = '>>';
+                document.getElementById('span_11').innerText = '>>'
+            } else if(document.getElementById('13').style.display == 'block'){
+                document.getElementById('13').style.display = 'none';
+                document.getElementById('span_13').innerText = '>>'
+            }
+        };
+        document.getElementById('div_all12').onclick = function(){
+            if(document.getElementById('12').style.display == 'none'){
+                document.getElementById('12').style.display = 'block';
+                document.getElementById('11').style.display = 'none';
+                document.getElementById('13').style.display = 'none';
+                document.getElementById('span_12').innerText = '<<';
+                document.getElementById('span_13').innerText = '>>';
+                document.getElementById('span_11').innerText = '>>'
+            } else if(document.getElementById('12').style.display == 'block'){
+                document.getElementById('12').style.display = 'none';
+                document.getElementById('span_12').innerText = '>>'
+            }
+        };
+        document.getElementById('div_all11').onclick = function(){
+            if(document.getElementById('11').style.display == 'none'){
+                document.getElementById('11').style.display = 'block';
+                document.getElementById('12').style.display = 'none';
+                document.getElementById('13').style.display = 'none';
+                document.getElementById('span_11').innerText = '<<';
+                document.getElementById('span_12').innerText = '>>';
+                document.getElementById('span_13').innerText = '>>'
+            }else if(document.getElementById('11').style.display == 'block'){
+                document.getElementById('11').style.display = 'none';
+                document.getElementById('span_11').innerText = '>>'
+            }
+        };
+    </script>
+</body>
+
+</html>

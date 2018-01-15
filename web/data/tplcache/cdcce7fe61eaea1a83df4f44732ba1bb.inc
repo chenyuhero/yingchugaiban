@@ -1,0 +1,9 @@
+<div class="des" style="text-align: center">
+                    <div class="right">
+                    	<div class="title">
+				[field:fulltitle/]   <!-- 招聘标题-->
+                    	</div>
+                        [field:body/]<!-- 招聘内容-->
+                    </div>
+		</div>
+			      <div class="mainblank20"></div>

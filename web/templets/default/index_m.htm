@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:global.keywords/}" />
+    <meta name="description" content="{dede:global.description/}" />
+    {dede:include filename='meta_m.htm'/}
+    <style>
+        header .menublock .menulink .homeactive a {
+            border-bottom-color: #fff;
+        }
+        .p{
+            font-size: 2.2em;
+        }
+    </style>
+</head>
+
+<body>
+    {dede:include filename="head_m.htm"/}
+    
+    <!-- 中间区域 开始 -->
+<div class="ibanner">
+	<div class="single-item">
+    <div class="slick-slide"><a><img src="/yczcimg/banner/b1.jpg" alt="盈楚资产"></a></div>
+    <div class="slick-slide"><a><img src="/yczcimg/banner/b2.jpg" alt="盈楚资产"></a></div>
+    <div class="slick-slide"><a><img src="/yczcimg/banner/b3.jpg" alt="盈楚资产"></a></div>
+	</div>
+</div>
+<div id="fullbg"></div>
+<div class="explain_bg" onClick="explain_hide()"></div>
+
+<div class="icon1 clearfix">
+	<div class="tit1">
+      <img src="/yczcimg/m/index/01.png" class="imgm">
+      <div class="mainblank20"></div>
+      <img src="/yczcimg/m/index/02.png" class="imgm">
+      <div class="mainblank30"></div>
+    	<div class="wp">
+    	<div class="h1">私募股权投资</div>
+        <div class="xhx"></div>
+      <div class="mainblank20"></div>
+        <div class="p">
+       <span>盈楚资产致力于私募股权投资，结合自身团队优势，并与主流券商投行部和著名私募机构紧密合作，通过多元化与多级化投资策略，为投资者创造高额回报。</span>
+
+        </div>
+        <div class="m1"><a href="/m/list.php?tid=6">查看更多</a></div>
+        </div>
+    </div>
+</div>
+
+<div class="icon2 clearfix">
+	<div class="tit1">
+      <img src="/yczcimg/m/index/04.png" class="imgm">
+      <div class="mainblank30"></div>
+		<div class="Cimg">
+          {dede:arclist addfields='small' channelid='1' typeid='32' row=1 titlelen=32 noflag='h'}
+                	<a href="/m[field:arcurl/]">
+                	<div><img src="[field:small/]" alt="[field:title/]" class="imgm"></div>
+                    </a>
+          {/dede:arclist}
+		</div>
+      <div class="mainblank20"></div>
+        <div class="m1"><a href="/m/list.php?tid=32">更多专题</a></div>
+    </div>
+</div>
+
+<div class="icon1 clearfix">
+	<div class="tit1">
+      <img src="/yczcimg/m/index/06.png" class="imgm">
+      <div class="mainblank20"></div>
+    <div class="icase">
+    	<div class="single-item1">
+            	<div class="li" id="div_zx">
+          {dede:arclist addfields='small' channelid='1' typeid='26' row=1 titlelen=32 noflag='h'}
+                	<a href="view.php?aid=[field:id/]">
+                	<div class="img"><img src="[field:small/]" alt="[field:title/]"></div>
+                    <div class="text">
+                    <div class="h3"><strong>[field:title/]</strong><em></em></div>
+                    <div class="p">[field:description/]...</div>
+                    </div>
+                    </a>
+          {/dede:arclist}
+                </div>
+            
+        </div>
+    </div>
+        <div class="m1"><a href="/m/list.php?tid=26">更多资讯</a></div>
+    </div>
+</div>
+
+<div class="icon5 clearfix">
+	<div class="tit1">
+      <img src="/yczcimg/m/index/07.png" class="imgm">
+      <div class="mainblank30"></div>
+		<div class="Cimg">
+          {dede:arclist addfields='small' channelid='1' typeid='29' row=1 titlelen=32 noflag='h'}
+                	<a href="view.php?aid=[field:id/]">
+                	<div><img src="[field:small/]" alt="[field:title/]" class="imgm"></div>
+                    </a>
+          {/dede:arclist}
+		</div>
+      <div class="mainblank20"></div>
+        <div class="m1"><a href="/m/list.php?tid=29">更多视频</a></div>
+    </div>
+</div>
+
+
+    <!-- 中间区域 结束 -->
+
+    {dede:include filename="footer_m.htm"/}
+
+    
+</body>
+
+</html>

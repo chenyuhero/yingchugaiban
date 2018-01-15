@@ -1,0 +1,5 @@
+<?php
+$z[0]=Array("fulltitle","",341,359);
+$z[1]=Array("body","",508,521);
+
+?>

@@ -1,0 +1,1 @@
+INSERT INTO `dede_member_vhistory` VALUES('1','0','a79aef70-f76f-11e7-a','1','admin','1','180.118.10.38','1515746040');
